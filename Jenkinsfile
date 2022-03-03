@@ -48,7 +48,7 @@ pipeline {
              
             steps 
 			{
-                sh "docker run -d -p 8080:8080 takhil/foodapp"
+                sh "docker run -d -p 8080:8080 takshil/foodapp"
  
             }
         }
