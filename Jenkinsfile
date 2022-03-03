@@ -48,14 +48,14 @@ pipeline {
              
             steps 
 			{
-                sh "docker run -d -p 8080:8080 nikhilnidhi/samplewebapp"
+                sh "docker run -d -p 8080:8080 takhil/foodapp"
  
             }
         }
  stage('Run Docker container') {
              
             steps {
-                sh "docker run -d -p 8080:8080 nikhilnidhi/samplewebapp"
+                sh "docker run -d -p 8080:8080 takshil/foodapp"
  
             }
         }
