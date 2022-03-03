@@ -8,49 +8,55 @@ pipeline {
     // sudo usermod -a -G docker jenkins
     // restart jenkins server ->  sudo service jenkins restart
     stages {
-        
-        stage('Maven Compile') {
-            steps {
-                echo '----------------- This is a compile phase ----------'
-                sh 'mvn clean compile'
-            }
+      stage('checkout') {
+           steps {
+             
+                git branch: 'master', url: 'https://github.com/Le4kno3/foodapp.git'
+             
+          }
+        }
+	 stage('Execute Maven') {
+           steps {
+             
+                sh 'mvn package'             
+          }
         }
         
-         stage('Maven Test') {
-            steps {
-                echo '----------------- This is a compile phase ----------'
-                sh 'mvn clean test'
-            }
-        }
-        
-        stage('Maven Build') {
-             steps {
-                echo '----------------- This is a build phase ----------'
-                sh 'mvn clean package -DskipTests'
-            }
-        }
 
-        stage('Docker Build') {
+  stage('Docker Build and Tag') {
+           steps {
+              
+                sh 'docker build -t foodapp:latest .' 
+                sh 'docker tag foodapp takshil/foodapp:latest'
+                //sh 'docker tag samplewebapp nikhilnidhi/samplewebapp:$BUILD_NUMBER'
+               
+          }
+        }
+     
+  stage('Publish image to Docker Hub') {
+          
             steps {
-                echo '----------------- This is a build docker image phase ----------'
-                sh '''
-                    docker image build -t ecom-webservice .
-                '''
+        withDockerRegistry([ credentialsId: "dockerHub", url: "" ]) {
+          sh  'docker push takshil/foodapp:latest'
+        //  sh  'docker push nikhilnidhi/samplewebapp:$BUILD_NUMBER' 
+        }
+                  
+          }
+        }
+     
+      stage('Run Docker container on Jenkins Agent') {
+             
+            steps 
+			{
+                sh "docker run -d -p 8080:8080 nikhilnidhi/samplewebapp"
+ 
             }
         }
-
-        stage('Docker Deploy') {
+ stage('Run Docker container') {
+             
             steps {
-                echo '----------------- This is a docker deploment phase ----------'
-                sh '''
-                 (if  [ $(docker ps -a | grep ecom-webservice | cut -d " " -f1) ]; then \
-                        echo $(docker rm -f ecom-webservice); \
-                        echo "---------------- successfully removed ecom-webservice ----------------"
-                     else \
-                    echo OK; \
-                 fi;);
-            docker container run --restart always --name ecom-webservice -p 8081:8081 -d ecom-webservice
-            '''
+                sh "docker run -d -p 8080:8080 nikhilnidhi/samplewebapp"
+ 
             }
         }
     }
