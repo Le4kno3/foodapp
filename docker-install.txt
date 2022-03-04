@@ -15,3 +15,6 @@ sudo docker --version
 sudo docker -v
 
 sudo docker info
+
+# Docker run command, where 8080 is the container's port and 80 is where the application will run, myapp is the docker image tag.
+sudo docker run -p 80:8080 myapp
