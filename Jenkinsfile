@@ -9,25 +9,25 @@ pipeline {
         stage('clean') {
     	    agent any
             steps {
-                sh 'mvn clean'
+                sh 'sudo mvn clean'
             }
         }
         stage('compile') {
     	    agent any
             steps {
-                sh 'mvn compile'
+                sh 'sudo mvn compile'
             }
         }
     	stage('test') {
     	    agent any
             steps {
-                sh 'mvn test'             
+                sh 'sudo mvn test'             
             }
         }
         stage('package') {
     	    agent any
             steps {
-                sh 'mvn package'             
+                sh 'sudo mvn package'             
             }
         }
     }
