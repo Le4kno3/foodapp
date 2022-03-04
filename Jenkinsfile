@@ -36,7 +36,7 @@ pipeline {
                 sh '''rm -rf dockerimg
 mkdir dockerimg
 cd dockerimg
-cp /var/lib/jenkins/workspace/foodbox-pipeline/target/foodapp.war .
+cp /var/lib/jenkins/workspace/foodbox-pipeline@2/target/foodapp.war .
 touch Dockerfile
 cat <<EOT>>Dockerfile
 FROM tomcat
