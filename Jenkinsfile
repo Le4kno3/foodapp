@@ -6,6 +6,12 @@ pipeline {
     }
 
     stages {
+        stage('clean') {
+    	    agent any
+            steps {
+                sh 'mvn clean'
+            }
+        }
         stage('compile') {
     	    agent any
             steps {
