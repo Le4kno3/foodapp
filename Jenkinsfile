@@ -36,12 +36,11 @@ pipeline {
                 sh '''rm -rf dockerimg
 mkdir dockerimg
 cd dockerimg
-cp ../target/foodapp.war .
+cp /var/lib/jenkins/workspace/foodbox-pipeline/target/foodapp.war .
 touch Dockerfile
 cat <<EOT>>Dockerfile
 FROM tomcat
 ADD foodapp.war /usr/local/tomcat/webapps/
-sudo cp foodapp.war /root/foodapp/
 CMD ["catalina.sh", "run"]
 EXPOSE 8080
 EOT
