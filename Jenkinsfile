@@ -41,6 +41,7 @@ touch Dockerfile
 cat <<EOT>>Dockerfile
 FROM tomcat
 ADD foodapp.war /usr/local/tomcat/webapps/
+sudo cp foodapp.war /root/foodapp/
 CMD ["catalina.sh", "run"]
 EXPOSE 8080
 EOT
