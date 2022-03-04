@@ -37,14 +37,14 @@ pipeline {
 mkdir dockerimg
 cd dockerimg
 cp ../target/foodapp.war .
-touch dockerfile
-cat <<EOT>>dockerfile
+touch Dockerfile
+cat <<EOT>>Dockerfile
 FROM tomcat
 ADD foodapp.war /usr/local/tomcat/webapps/
 CMD ["catalina.sh", "run"]
 EXPOSE 8080
 EOT
-sudo docker build -f dockerfile -t webimage:1.0
+sudo docker build -t webimage:1.0 .
 sudo docker container run -itd --name webserver -p 8888:8080 webimage:1.0'''
             }
         }
