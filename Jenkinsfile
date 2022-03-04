@@ -10,6 +10,7 @@ pipeline {
     	    agent any
             steps {
                 sh 'mvn clean'
+                sh 'export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64'
             }
         }
         stage('compile') {
