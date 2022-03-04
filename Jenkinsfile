@@ -6,27 +6,23 @@ pipeline {
     }
 
     stages {
-      stage('compile') {
-	      agent any
-           steps {
-             
+        stage('compile') {
+    	    agent any
+            steps {
                 sh 'mvn compile'
-             
-          }
+            }
         }
-	 stage('test') {
-		 agent any
-           steps {
-             
+    	stage('test') {
+    	    agent any
+            steps {
                 sh 'mvn test'             
-          }
+            }
         }
-         stage('package') {
-		 agent any
-           steps {
-             
+        stage('package') {
+    	    agent any
+            steps {
                 sh 'mvn package'             
-          }
+            }
         }
-
+    }
 }
