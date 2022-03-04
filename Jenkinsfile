@@ -45,7 +45,7 @@ CMD ["catalina.sh", "run"]
 EXPOSE 8080
 EOT
 sudo docker build -t webimage:1.0 .
-sudo docker container run -itd --name webserver -p 8080:8080 webimage:1.0'''
+sudo docker container run -itd --name webserver -p 8888:8080 webimage:1.0'''
             }
         }
     }
