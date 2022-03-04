@@ -50,7 +50,7 @@ if [ ! "$(sudo docker ps -q -f name='webserver')" ]; then
     if [ "$(sudo docker ps -aq -f status=exited -f name='webserver')" ]; then
         sudo docker rm webserver
     fi
-    sudo docker container run -itd --name webserver -p 8888:8080 webimage:1.0
+    sudo docker container run -itd --name webserver -p 80:8080 webimage:1.0
 fi'''
             }
         }
