@@ -37,24 +37,9 @@ pipeline {
 mkdir dockerimg
 cd dockerimg
 cp ../target/foodapp.war .
-cp ../databases/test.sql .
-cp ../databases/cart_db.sql .
-touch Dockerfile
-cat <<EOT>>Dockerfile
-FROM tomcat:9.0
-LABEL maintainer="shamal indurkar"
-ADD foodapp.war /usr/local/tomcat/webapps/foodapp.war
-EXPOSE 8080
-CMD ["catalina.sh", "run"]
-EOT
-sudo docker build --net="host" -t webimage:1.0 .
-if [ ! "$(sudo docker ps -q -f name='webserver')" ]; then
-    if [ "$(sudo docker ps -aq -f status=exited -f name='webserver')" ]; then
-        sudo docker rm webserver
-        sudo docker rmi webimage
-    fi
-   sudo docker container run -itd --name webserver -p 8888:8080 webimage:1.0
-fi'''
+cp ../Dockerfile .
+sudo docker build -t myapp .
+sudo docker run -d -p 8888:8080 myapp
             }
         }
     }
