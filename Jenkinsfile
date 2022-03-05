@@ -39,7 +39,7 @@ cd dockerimg
 cp ../target/foodapp.war .
 cp ../Dockerfile .
 sudo docker build -t myapp .
-sudo docker run -d -p 8888:8080 myapp
+sudo docker run -d -p 8888:8080 myapp'''
             }
         }
     }
