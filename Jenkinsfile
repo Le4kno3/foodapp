@@ -37,11 +37,23 @@ pipeline {
 mkdir dockerimg
 cd dockerimg
 cp ../target/foodapp.war .
+cp ../databases/test.sql .
+cp ../databases/cart_db.sql .
 touch Dockerfile
 cat <<EOT>>Dockerfile
 FROM tomcat:9.0
 LABEL maintainer="shamal indurkar"
 ADD foodapp.war /usr/local/tomcat/webapps/foodapp.war
+ADD test.sql /usr/local/tomcat/webapps/test.sql
+ADD cart_db.sql /usr/local/tomcat/webapps/cart_db.sql
+RUN apt update
+RUN apt install mariadb-server -y
+RUN service mariadb start
+RUN mysql -e "create database test;"
+RUN mysql -e "create database cart_db;"
+RUN mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED BY '12Password12#'; FLUSH PRIVILEGES;"
+RUN mysql --user=root --password=12Password12# test < /usr/local/tomcat/webapps/test.sql
+RUN mysql --user=root --password=12Password12# cart_db < /usr/local/tomcat/webapps/cart_db.sql
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
 EOT
