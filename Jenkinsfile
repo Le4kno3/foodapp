@@ -48,7 +48,7 @@ ADD test.sql /usr/local/tomcat/webapps/test.sql
 ADD cart_db.sql /usr/local/tomcat/webapps/cart_db.sql
 RUN apt update
 RUN apt install mariadb-server -y
-RUN service mariadb start; mysql -e "create database test;"; mysql -e "create database cart_db;"
+RUN service mariadb start && mysql -e "create database test;" && mysql -e "create database cart_db;"
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
 EOT
