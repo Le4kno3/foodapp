@@ -55,7 +55,7 @@ RUN mysql --user=root --password=12Password12# test -e "SET SQL_MODE = 'NO_AUTO_
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
 EOT
-sudo docker build --no-cache -t webimage:1.0 .
+sudo docker build --no-cache --rm=false -t webimage:1.0 .
 if [ ! "$(sudo docker ps -q -f name='webserver')" ]; then
     if [ "$(sudo docker ps -aq -f status=exited -f name='webserver')" ]; then
         sudo docker rm webserver
