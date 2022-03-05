@@ -48,8 +48,13 @@ ADD test.sql /usr/local/tomcat/webapps/test.sql
 ADD cart_db.sql /usr/local/tomcat/webapps/cart_db.sql
 RUN apt update
 RUN apt install mariadb-server -y
-RUN service mariadb start && mysql -e "create database test;" && mysql -e "create database cart_db;"
+RUN service mariadb start && mysql -e "create database test;"
+RUN service mariadb start && mysql -e "create database cart_db;"
+RUN service mariadb start && mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED BY '12Password12#'; FLUSH PRIVILEGES;"
+RUN service mariadb start && mysql --user=root --password=12Password12# test < /usr/local/tomcat/webapps/test.sql
+RUN service mariadb start && mysql --user=root --password=12Password12# cart_db < /usr/local/tomcat/webapps/cart_db.sql
 EXPOSE 8080
+EXPOSE 3306
 CMD ["catalina.sh", "run"]
 EOT
 sudo docker build -t webimage:1.0 .
