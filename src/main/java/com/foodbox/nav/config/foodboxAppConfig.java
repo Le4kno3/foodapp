@@ -66,7 +66,7 @@ public class foodboxAppConfig implements WebMvcConfigurer{
 		//set the db info to the datasource object
 		dataSource.setUsername("root");
 		dataSource.setPassword("12Password12#");
-		dataSource.setUrl("jdbc:mysql://172.17.0.1:3306/cart_db?useSSL=false");
+		dataSource.setUrl("jdbc:mysql://localhost:3306/cart_db?useSSL=false");
 		dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
 		
 		return dataSource;
@@ -88,7 +88,7 @@ public class foodboxAppConfig implements WebMvcConfigurer{
 		//set the db info to the datasource object
 		dataSource.setUsername("root");
 		dataSource.setPassword("12Password12#");
-		dataSource.setUrl("jdbc:mysql://172.17.0.1:3306/test?useSSL=false");
+		dataSource.setUrl("jdbc:mysql://localhost:3306/test?useSSL=false");
 		dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
 		
 		return dataSource;
