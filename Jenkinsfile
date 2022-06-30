@@ -36,7 +36,7 @@ pipeline {
                 sh '''rm -rf dockerimg
 mkdir dockerimg
 cd dockerimg
-cp ../target/foodapp.war .
+cp ../target/ecom-website.war .
 cp ../Dockerfile .
 docker container stop $(docker ps -a -q)
 docker rm $(docker ps -a -q)
