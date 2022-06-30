@@ -16,7 +16,7 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    <link rel="stylesheet" href="/foodapp/staticfiles/css/style.css">
+    <link rel="stylesheet" href="/ecom-website/staticfiles/css/style.css">
   
 </head>
 <body>
@@ -24,7 +24,7 @@
 
     <header class="header">
     
-    <img src="/foodapp/staticfiles/image/kpezignf_2jpg.jpg" alt=" " width="80" height="60" class="logo"> <i class="fas"></i> 
+    <img src="/ecom-website/staticfiles/image/kpezignf_2jpg.jpg" alt=" " width="80" height="60" class="logo"> <i class="fas"></i> 
 
     <nav class="navbar">
         <a href="#home">Home</a>
@@ -52,7 +52,7 @@
     <div class="shopping-cart">
         <div class="box">
             <i class="fas fa-trash"></i>
-            <img src="/foodapp/staticfiles/image/Mar.jpg" alt="" width=130px height=100px>
+            <img src="/ecom-website/staticfiles/image/Mar.jpg" alt="" width=130px height=100px>
             <div class="content">
                 <h3>Margherita Pizza</h3>
                 <span class="price">250/- &#x20b9;</span>
@@ -61,7 +61,7 @@
         </div>
         <div class="box">
             <i class="fas fa-trash"></i>
-            <img src="/foodapp/staticfiles/image/Bir.jpg" alt="" width=130px height=100px>
+            <img src="/ecom-website/staticfiles/image/Bir.jpg" alt="" width=130px height=100px>
             <div class="content">
                 <h3>Biryani</h3>
                 <span class="price">540/- &#x20b9;</span>
@@ -70,7 +70,7 @@
         </div>
         <div class="box">
             <i class="fas fa-trash"></i>
-            <img src="/foodapp/staticfiles/image/g-1.jpg" alt="" width=130px height=100px>
+            <img src="/ecom-website/staticfiles/image/g-1.jpg" alt="" width=130px height=100px>
             <div class="content">
                 <h3>Burger</h3>
                 <span class="price">120/- &#x20b9;</span>
@@ -109,7 +109,7 @@
 
 
     <div class="admin">
-        <form action="/foodapp/admin_page" method="post"> 
+        <form action="/ecom-website/admin_page" method="post"> 
 
             <input type="submit" value="admin-portal"  class ="btn">
         </form> 
@@ -140,21 +140,21 @@
     <div class="box-container">
 
         <div class="box">
-            <img src="/foodapp/staticfiles/image/feature-img-1.png" alt="">
+            <img src="/ecom-website/staticfiles/image/feature-img-1.png" alt="">
             <h3>fresh and organic</h3>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, earum!</p>
             <a href="#" class="btn">read more</a>
         </div>
 
         <div class="box">
-            <img src="/foodapp/staticfiles/image/feature-img-2.png" alt="">
+            <img src="/ecom-website/staticfiles/image/feature-img-2.png" alt="">
             <h3>free delivery</h3>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, earum!</p>
             <a href="#" class="btn">read more</a>
         </div>
 
         <div class="box">
-            <img src="/foodapp/staticfiles/image/feature-img-3.png" alt="">
+            <img src="/ecom-website/staticfiles/image/feature-img-3.png" alt="">
             <h3>easy payments</h3>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, earum!</p>
             <a href="#" class="btn">read more</a>
@@ -174,7 +174,7 @@
         <div class="swiper-wrapper">
 
             <div class="swiper-slide box">
-                <img src="/foodapp/staticfiles/image/Biryani1.jpg" alt="">
+                <img src="/ecom-website/staticfiles/image/Biryani1.jpg" alt="">
                 <h3>Biryani</h3>
                 <div class="price">120/- &#x20b9;</div>
                 <div class="stars">
@@ -188,7 +188,7 @@
             </div>
 
             <div class="swiper-slide box">
-                <img src="/foodapp/staticfiles/image/food-table.jpg" alt="">
+                <img src="/ecom-website/staticfiles/image/food-table.jpg" alt="">
                 <h3>Salet</h3>
                 <div class="price"> 60/- &#x20b9;</div>
                 <div class="stars">
@@ -202,7 +202,7 @@
             </div>
 
             <div class="swiper-slide box">
-                <img src="/foodapp/staticfiles/image/p-5.jpg" alt="">
+                <img src="/ecom-website/staticfiles/image/p-5.jpg" alt="">
                 <h3>Drink</h3>
                 <div class="price">20/- &#x20b9;</div>
                 <div class="stars">
@@ -216,7 +216,7 @@
             </div>
 
             <div class="swiper-slide box">
-                <img src="/foodapp/staticfiles/image/p-2.jpg" alt="">
+                <img src="/ecom-website/staticfiles/image/p-2.jpg" alt="">
                 <h3>Sweet</h3>
                 <div class="price">80/- &#x20b9; </div>
                 <div class="stars">
@@ -230,7 +230,7 @@
             </div>
 
             <div class="swiper-slide box">
-                <img src="/foodapp/staticfiles/image/snack.jpg" alt="">
+                <img src="/ecom-website/staticfiles/image/snack.jpg" alt="">
                 <h3>Snaks</h3>
                 <div class="price">200/- &#x20b9;</div>
                 <div class="stars">
@@ -252,7 +252,7 @@
         <div class="swiper-wrapper">
 
             <div class="swiper-slide box">
-                <img src="/foodapp/staticfiles/image/g-4.jpg" alt="">
+                <img src="/ecom-website/staticfiles/image/g-4.jpg" alt="">
                 <h3>Pancakeswap</h3>
                 <div class="price">40/- &#x20b9; </div>
                 <div class="stars">
@@ -266,7 +266,7 @@
             </div>
 
             <div class="swiper-slide box">
-                <img src="/foodapp/staticfiles/image/g-3.jpg" alt="">
+                <img src="/ecom-website/staticfiles/image/g-3.jpg" alt="">
                 <h3>Veg-Roll</h3>
                 <div class="price">20/- &#x20b9; </div> 
                 <div class="stars">
@@ -280,7 +280,7 @@
             </div>
 
             <div class="swiper-slide box">
-                <img src="/foodapp/staticfiles/image/Crispy_Chicken.jpg" alt="" width="300px" height="100px">
+                <img src="/ecom-website/staticfiles/image/Crispy_Chicken.jpg" alt="" width="300px" height="100px">
                 <h3>Crispy-Chikan</h3>
                 <div class="price"> 140/- &#x20b9; </div>
                 <div class="stars">
@@ -294,7 +294,7 @@
             </div>
 
             <div class="swiper-slide box">
-                <img src="/foodapp/staticfiles/image/Fru.jpg" alt="">
+                <img src="/ecom-website/staticfiles/image/Fru.jpg" alt="">
                 <h3> Pineapple Juice </h3>
                 <div class="price"> 80/- &#x20b9; </div>
                 <div class="stars">
@@ -323,28 +323,28 @@
     <div class="box-container">
 
         <div class="box">
-            <img src="/foodapp/staticfiles/image/Vej.png" alt="">
+            <img src="/ecom-website/staticfiles/image/Vej.png" alt="">
             <h3>Veg</h3>
             <p>upto 45% off</p>
             <a href="#" class="btn">shop now</a>
         </div>
 
         <div class="box">
-            <img src="/foodapp/staticfiles/image/Biryani1.jpg" alt="">
+            <img src="/ecom-website/staticfiles/image/Biryani1.jpg" alt="">
             <h3>Non-Veg</h3>
             <p>upto 45% off</p>
             <a href="#" class="btn">shop now</a>
         </div>
 
         <div class="box">
-            <img src="/foodapp/staticfiles/image/Sweets.png" alt="">
+            <img src="/ecom-website/staticfiles/image/Sweets.png" alt="">
             <h3>Sweets</h3>
             <p>upto 45% off</p>
             <a href="#" class="btn">shop now</a>
         </div>
 
         <div class="box">
-            <img src="/foodapp/staticfiles/image/Snacks.jpg" alt="">
+            <img src="/ecom-website/staticfiles/image/Snacks.jpg" alt="">
             <h3>Snacks</h3>
             <p>upto 45% off</p>
             <a href="#" class="btn">shop now</a>
@@ -366,7 +366,7 @@
         <div class="swiper-wrapper">
 
             <div class="swiper-slide box">
-                <img src="/foodapp/staticfiles/image/pic-1.png" alt="">
+                <img src="/ecom-website/staticfiles/image/pic-1.png" alt="">
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde sunt fugiat dolore ipsum id est maxime ad tempore quasi tenetur.</p>
                 <h3>Kumar Indurkar</h3>
                 <div class="stars">
@@ -379,7 +379,7 @@
             </div>
 
             <div class="swiper-slide box">
-                <img src="/foodapp/staticfiles/image/pic-2.png" alt="">
+                <img src="/ecom-website/staticfiles/image/pic-2.png" alt="">
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde sunt fugiat dolore ipsum id est maxime ad tempore quasi tenetur.</p>
                 <h3>Trisha </h3>
                 <div class="stars">
@@ -392,7 +392,7 @@
             </div>
 
             <div class="swiper-slide box">
-                <img src="/foodapp/staticfiles/image/pic-3.png" alt="">
+                <img src="/ecom-website/staticfiles/image/pic-3.png" alt="">
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde sunt fugiat dolore ipsum id est maxime ad tempore quasi tenetur.</p>
                 <h3>Takshil Patil</h3>
                 <div class="stars">
@@ -405,7 +405,7 @@
             </div>
 
             <div class="swiper-slide box">
-                <img src="/foodapp/staticfiles/image/pic-4.png" alt="">
+                <img src="/ecom-website/staticfiles/image/pic-4.png" alt="">
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde sunt fugiat dolore ipsum id est maxime ad tempore quasi tenetur.</p>
                 <h3>Aachal Jambhulkar</h3>
                 <div class="stars">
@@ -431,7 +431,7 @@
     <div class="box-container">
 
         <div class="box">
-            <img src="/foodapp/staticfiles/image/Cofee.jpg" alt="">
+            <img src="/ecom-website/staticfiles/image/Cofee.jpg" alt="">
             <div class="content">
                 <div class="icons">
                     <a href="#"> <i class="fas fa-user"></i> by user </a>
@@ -444,7 +444,7 @@
         </div>
 
         <div class="box">
-            <img src="/foodapp/staticfiles/image/Sandwich.jpg" alt="">
+            <img src="/ecom-website/staticfiles/image/Sandwich.jpg" alt="">
             <div class="content">
                 <div class="icons">
                     <a href="#"> <i class="fas fa-user"></i> by user </a>
@@ -457,7 +457,7 @@
         </div>
 
         <div class="box">
-            <img src="/foodapp/staticfiles/image/Manturian.jpg" alt="">
+            <img src="/ecom-website/staticfiles/image/Manturian.jpg" alt="">
             <div class="content">
                 <div class="icons">
                     <a href="#"> <i class="fas fa-user"></i> by user </a>
@@ -564,7 +564,7 @@
             <p>subscribe for latest updates</p>
             <input type="email" placeholder="your email" class="email">
             <input type="submit" value="subscribe" class="btn">
-            <img src="/foodapp/staticfiles/image/payment.png" class="payment-img" alt="">
+            <img src="/ecom-website/staticfiles/image/payment.png" class="payment-img" alt="">
         </div>
 
     </div>
@@ -579,7 +579,7 @@
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
 
-<script src="/foodapp/staticfiles/js/script.js"></script>
+<script src="/ecom-website/staticfiles/js/script.js"></script>
 
 </body>
 

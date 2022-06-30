@@ -52,7 +52,7 @@ if(isset($message)){
 
 
 <!-- custom css file link  -->
-<link rel="stylesheet" href="/foodapp/staticfiles/css/style1.css">
+<link rel="stylesheet" href="/ecom-website/staticfiles/css/style1.css">
 
 
 </head>
@@ -111,7 +111,7 @@ if(isset($message)){
 			
 				<tr>
 					<td><img
-						src="/foodapp/staticfiles/uploaded_img/${product.image}"
+						src="/ecom-website/staticfiles/uploaded_img/${product.image}"
 						height="100" alt=""></td>
 					<td>
 						${product.name}
