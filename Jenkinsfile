@@ -42,7 +42,7 @@ docker container stop $(docker ps -a -q)
 docker rm $(docker ps -a -q)
 docker rmi $(docker images -q)
 sudo docker build -t myapp .
-sudo docker run -d -p 8888:8088 myapp'''
+sudo docker run -d -p 8888:8080 myapp'''
             }
         }
     }
