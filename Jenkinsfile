@@ -11,7 +11,8 @@ pipeline {
 				script{
 					//this will export the result/reports to sonarqube
 					withSonarQubeEnv(credentialsId: '1'){
-						sh 'sudo mvn sonar:sonar'
+						sh 'mvn sonar:sonar -Dsonar.host.url=http://192.168.1.11:9000 
+  -Dsonar.login=squ_7e503d3972354f7eb1966a1d99d2b6523f1a9af9'
 					}
 					//
 					timeout(time: 1, unit: 'HOURS'){
