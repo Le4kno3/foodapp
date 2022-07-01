@@ -10,7 +10,7 @@ pipeline {
 			steps{
 				script{
 					//this will export the result/reports to sonarqube
-					withSonarQubeEnv('sonarserver'){
+					withSonarQubeEnv(credentialsId: '1'){
 						sh 'sudo mvn sonar:sonar'
 					}
 					//
