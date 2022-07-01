@@ -6,7 +6,7 @@ pipeline {
 	}
 	
 	stages {
-		stage(){
+		stage('Quality Gate Statuc Check'){
 			steps{
 				script{
 					//this will export the result/reports to sonarqube
@@ -20,7 +20,7 @@ pipeline {
 							error "Pipeline aborted due to quality gate failure: ${qg.status}"
 						}
 					}
-					sh 'sudo mvn clean'
+					sh 'sudo mvn clean install'
 				}
 			}
 		}
